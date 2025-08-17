@@ -1,0 +1,384 @@
+/*
+BritPunjabi.com - Modern & Elegant Stylesheet
+*/
+
+/* --- Root Variables --- */
+:root {
+    --primary-color: #0a2540; /* Deep Blue */
+    --secondary-color: #ffffff;
+    --accent-color: #00bfff; /* Deep Sky Blue */
+    --text-color: #333;
+    --light-gray: #f4f4f4;
+    --dark-gray: #555;
+    --font-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-secondary: 'Georgia', serif;
+}
+
+/* --- General Styles --- */
+body {
+    font-family: var(--font-primary);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-secondary);
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+h1 { font-size: 3em; }
+h2 { font-size: 2.5em; text-align: center; margin-bottom: 40px; }
+h3 { font-size: 1.5em; }
+
+p {
+    margin-bottom: 20px;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    border: 2px solid var(--accent-color);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--accent-color);
+}
+
+/* --- Header --- */
+.header {
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav ul li {
+    margin-left: 25px;
+}
+
+.nav ul li a {
+    color: var(--dark-gray);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* --- Hero Section --- */
+.hero {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    color: var(--secondary-color);
+    font-size: 3.5em;
+}
+
+.hero p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+/* --- Services Section --- */
+.services {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-item {
+    background: var(--secondary-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+}
+
+.service-icon {
+    font-size: 3em;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+/* --- Portfolio Section --- */
+.portfolio {
+    padding: 80px 0;
+    text-align: center;
+}
+
+/* --- Testimonials Section --- */
+.testimonials {
+    padding: 80px 0;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.testimonials h2 {
+    color: var(--secondary-color);
+}
+
+.testimonial-item {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    text-align: center;
+    font-style: italic;
+}
+
+.testimonial-item p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.testimonial-item span {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+/* --- Blog Section --- */
+.blog {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.blog-post {
+    background: var(--secondary-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.blog-post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-post h3, .blog-post p, .blog-post a {
+    padding: 0 20px;
+}
+.blog-post a {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.social-share {
+    padding: 0 20px 20px;
+}
+
+.social-share a {
+    margin-right: 10px;
+    color: var(--dark-gray);
+    font-size: 1.2em;
+}
+
+/* --- Contact Section --- */
+.contact {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.whatsapp-integration .btn-whatsapp {
+    background: #25D366;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+}
+
+/* --- Footer --- */
+.footer {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 50px 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-col h3 {
+    color: var(--secondary-color);
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li a {
+    color: var(--light-gray);
+}
+
+.social-media a {
+    color: var(--secondary-color);
+    margin-right: 15px;
+    font-size: 1.5em;
+}
+
+.newsletter-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.newsletter-form button {
+    padding: 10px;
+    border: none;
+    background: var(--accent-color);
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid var(--dark-gray);
+    padding-top: 20px;
+}
+
+/* --- AI Chatbot Placeholder --- */
+#chatbot-placeholder {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: var(--secondary-color);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .nav.active {
+        display: block;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav ul li {
+        margin: 15px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    h1 { font-size: 2.5em; }
+    h2 { font-size: 2em; }
+}
